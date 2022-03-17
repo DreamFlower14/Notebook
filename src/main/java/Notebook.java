@@ -62,12 +62,12 @@ public class Notebook {
         System.out.println( a + " * " + (++c) + " = " + a * c ); */
 
         Scanner in = new Scanner(System.in); // 선언, 초기화
-        System.out.print(" 이름 입력 : ");
-        String name = "김성현";
-        String inputName = in.nextLine();
-        if(name.equals(inputName)) {
-            System.out.print("몇 단 : ");
-            int a = in.nextInt();
+        System.out.print(" 이름 입력 : ");    // scanner로 이름 입력
+        String name = "김성현";               // 분기문에서 기준 이름
+        String inputName = in.nextLine();    // 선언, 초기화
+        if(name.equals(inputName)) {         // 분기문(같은 이름 치기)
+            System.out.print("몇 단 : ");     // 분기문을 통과했을 때 나오는 입력창
+            int a = in.nextInt();             // 구구단 함수
             int b = 0;
             System.out.println(a + " * " + (++b) + " = " + a * b);
             System.out.println(a + " * " + (++b) + " = " + a * b);
@@ -79,7 +79,7 @@ public class Notebook {
             System.out.println(a + " * " + (++b) + " = " + a * b);
             System.out.println(a + " * " + (++b) + " = " + a * b); }
         else {
-                System.out.println(" 로그인 실패 ");
+                System.out.println(" 로그인 실패 ");  // if 분기문에서 실패햇을때 나오는 화면
             }
 
 
