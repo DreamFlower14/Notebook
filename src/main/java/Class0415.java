@@ -55,7 +55,7 @@ public class Class0415 {
         }
         average =  sum / a;
         System.out.println("총점은? : "+ sum);
-        System.out.println("평균점수는? : "+ average);*/
+        System.out.println("평균점수는? : "+ average);
 
         int[] score = {26, 20, 44, 54, 30, 40, 98, 37};
 
@@ -71,5 +71,80 @@ public class Class0415 {
         }
         System.out.println("최대값은 : "+ max);
         System.out.println("최소값은 : "+ min);
+
+        int[] score = {26, 20, 44, 54, 30, 40, 98, 37};
+        Integer[] score2 = {26, 20, 44, 54, 30, 40, 98, 37};
+
+        Arrays.sort(score); // 오름차순 정렬
+
+        for(int i = 0; i < score.length; i++){
+            System.out.println("정렬된"+ i + "번지 값은? : " + score[i]);
+        }
+        System.out.println();
+
+        Arrays.sort(score2, Collections.reverseOrder());  // 내림차순 정렬
+        for(int i = 0; i < score2.length; i++){
+            System.out.println("정렬된" + i + "번지 값은? : "+ score2[i]);
+        }
+
+        int[] arr = new int[10];
+
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = i;
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        for (int i = 0; i < arr.length; i++){
+            int n = (int) (Math.random() * 10);
+            int tmp = arr[0];
+            arr[0] = arr[n];
+            arr[n] = tmp;
+        }
+        System.out.println("셔플된 값은?");
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+
+        int[] arr = {1,2,3,4,5,6,7,8,9,6,2,1};
+
+        for(int i = 0; i < arr.length-1; i++){   // 전체 횟수
+            for(int j = 0; j < arr.length - 1 -i; j++){   // 큰 수를 뒤로 뺄수록 뒤에 꺼는 비교할 필요가 없어지니까 -i 를 해준다.
+                if(arr[j] > arr[j + 1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j + 1] = temp;
+                }
+            }
+            System.out.println(i+"번째 회전 결과는? :");
+            for (int k = 0; k < arr.length; k++){
+                System.out.print(arr[k]+ " ");
+            }
+            System.out.println();
+        }
+
+        int[] arr = {1,2,3,4,5,5,4,3,4};
+        int[] result = new int [9];
+
+        for (int i = 0; i <arr.length; i++){
+            result[arr[i]]++;
+        }for (int i = 0; i < result.length; i++){
+            System.out.println(i+ " 의 개수는 ? : "+result[i]); */
+
+        String  a, b, c;
+        int[] arr = new int[15];
+        a = "12345";
+        b = "54321";
+        c = "45678";
+
+        String result = a+b+c;
+        System.out.println(result);
+
+        for(int i = 0; i < arr.length; i++){
+            arr[result.charAt(i)-'0']++;
+        }
+        for(int i = 0; i < arr.length; i++){
+            System.out.println(arr[i]);
+        }
     }
 }
